@@ -19,3 +19,12 @@ python3 scripts/audit_permissions.py path/to/ci.yml   # specific files
 ```
 
 Exit code is 0 when clean and 1 when there are findings.
+
+## Validation
+
+```sh
+make validate   # unit tests, actionlint on .github/workflows, and the audit itself
+```
+
+`tests/fixtures/` holds one small workflow per rule. `actionlint` must be on
+the `PATH`; CI runs the tests and the audit.
