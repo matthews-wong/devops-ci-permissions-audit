@@ -1,0 +1,9 @@
+name: write-all
+on: push
+permissions: write-all
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions: write-all
+    steps:
+      - run: make build

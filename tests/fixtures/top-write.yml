@@ -1,0 +1,10 @@
+name: top-write
+on: push
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: make build
